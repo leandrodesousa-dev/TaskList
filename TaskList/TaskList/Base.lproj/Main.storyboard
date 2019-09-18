@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" title="Task List" id="Nj8-L6-XdN">
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="add" id="iNl-rR-eY3">
                             <connections>
-                                <segue destination="Q8Y-fL-XD7" kind="show" id="0U4-Wa-bQc"/>
+                                <segue destination="Q8Y-fL-XD7" kind="show" identifier="segueAdd" id="0U4-Wa-bQc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -63,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="901" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="RoX-ht-kxg">
             <objects>
-                <viewController id="Q8Y-fL-XD7" sceneMemberID="viewController">
+                <viewController id="Q8Y-fL-XD7" customClass="SecondViewController" customModule="TaskList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="utz-gB-geB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,16 +74,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lEt-MS-Mor">
                                 <rect key="frame" x="16" y="118" width="382" height="80"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abo-6F-wQp">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdv-S7-kXr">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abo-6F-wQp">
+                                        <rect key="frame" x="0.0" y="40.5" width="382" height="19.5"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ8-rF-rBq">
-                                        <rect key="frame" x="0.0" y="50" width="382" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ8-rF-rBq">
+                                        <rect key="frame" x="0.0" y="80" width="382" height="0.0"/>
                                         <color key="backgroundColor" red="0.70882146980000005" green="1" blue="0.60154908689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Salvar"/>
+                                        <connections>
+                                            <action selector="salveTask:" destination="Q8Y-fL-XD7" eventType="touchUpInside" id="zHN-pc-7GX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -99,6 +108,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="V5W-u9-gjC"/>
                     </view>
+                    <connections>
+                        <outlet property="textTask" destination="abo-6F-wQp" id="wI8-d6-hRb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GZJ-wN-OPb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -112,6 +124,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gLn-JM-Ddi">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.98987692589999998" green="0.97765284779999995" blue="0.76186716560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.98987692589999998" green="0.97765284779999995" blue="0.76186716560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
