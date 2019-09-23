@@ -38,6 +38,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="wQj-sF-aYp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="L4N-WB-z9L"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,31 +73,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lEt-MS-Mor">
-                                <rect key="frame" x="16" y="118" width="382" height="80"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lEt-MS-Mor">
+                                <rect key="frame" x="16" y="118" width="382" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new task:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdv-S7-kXr">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="43.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="abo-6F-wQp">
-                                        <rect key="frame" x="0.0" y="40.5" width="382" height="19.5"/>
+                                        <rect key="frame" x="0.0" y="53.5" width="382" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uQ8-rF-rBq">
-                                        <rect key="frame" x="0.0" y="80" width="382" height="0.0"/>
-                                        <color key="backgroundColor" red="0.70882146980000005" green="1" blue="0.60154908689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Salvar"/>
+                                        <rect key="frame" x="0.0" y="106.5" width="382" height="43.5"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Salve">
+                                            <color key="titleColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="salveTask:" destination="Q8Y-fL-XD7" eventType="touchUpInside" id="zHN-pc-7GX"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="5JC-ON-qzl"/>
+                                    <constraint firstAttribute="height" constant="150" id="5JC-ON-qzl"/>
                                 </constraints>
                             </stackView>
                         </subviews>
