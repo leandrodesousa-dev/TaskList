@@ -19,10 +19,23 @@ class ToListTaskController: UIViewController, UITableViewDelegate, UITableViewDa
         super.viewDidLoad()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-          let taskDates = TaskUserDefaults()
-              tasks = taskDates.toList()
+    fileprivate func atualizeListTask() {
+        let taskDates = TaskUserDefaults()
+        tasks = taskDates.toList()
         table.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        atualizeListTask()
+    }
+    
+    //deletar as cell, outras propriedades tamb[em de estilo
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete{
+        let taskRemove = TaskUserDefaults()
+            taskRemove.remove(index: indexPath.row)
+            atualizeListTask()
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
