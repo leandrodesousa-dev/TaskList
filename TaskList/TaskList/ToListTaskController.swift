@@ -13,16 +13,16 @@ class ToListTaskController: UIViewController, UITableViewDelegate, UITableViewDa
     let cellId = "cellId"
     var taskContent: String?
     var tasks: [String] = []
+    @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let taskDates = TaskUserDefaults()
-        tasks = taskDates.toList()
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        <#code#>
+          let taskDates = TaskUserDefaults()
+              tasks = taskDates.toList()
+        table.reloadData()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
