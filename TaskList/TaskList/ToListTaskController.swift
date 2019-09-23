@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ToListTaskController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let cellId = "cellId"
     var taskContent: String?

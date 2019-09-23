@@ -8,15 +8,15 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
-    
-    var salveTask: String?
-    
+class AddTaskController: UIViewController {
+
     @IBOutlet weak var textTask: UITextField!
     @IBAction func salveTask(_ sender: UIButton) {
      let textTaskContent = textTask.text
         if let textContentVerifed = textTaskContent {
-            salveTask = textContentVerifed
+            let task = TaskUserDefaults()
+            task.salve(task: textContentVerifed)
+            textTask.text = ""
         }
     }
     
