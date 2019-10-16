@@ -5,11 +5,6 @@
 
 Este é um aplicativo desenvolvido em Swift fazendo uso de uma TableView e uma lista de tarefas em cada Cell, tem como objetivo praticar os conhecimentos que estou aprendendo.
 
-## Instalação 
-
-**TODO** 
-*( Essa parte em branco pra preencher explicando como é a instalação de um aplicativo Swift )*
-
 ## Uso
 
 Para adicionar uma nova tarefa é necessário clicar no botão '+' que se encontra no canto superior direito.
@@ -27,11 +22,6 @@ Ao pressionar o botão, o aplicativo irá direcionar para outra Page com campo d
 ## About
 
 This application was developed with Swift using TableView and a List of tasks in each cell. Your purpose is to practice the knowledge i'm learning on Swift
-
-## Installation 
-
-**TODO** 
-*(  This sectin is blank for you to fill it up with the explanation of how to install the application on phones as a developer )*
 
 ## Usage
 
