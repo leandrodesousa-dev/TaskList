@@ -1,10 +1,46 @@
+
 # TaskList
 
-Um aplicativo com uma Table View com uma lista de tarefas em cada cell. 
+## Sobre
 
-Podemos adicionar uma nova tarefa quando clicamos no botão de '+' no canto superior direito que irá nos direcionar para 
-outra tela com campo para digitar a tarefa e um botão de salvar. 
+Este é um aplicativo desenvolvido em Swift fazendo uso de uma TableView e uma lista de tarefas em cada Cell, tem como objetivo praticar os conhecimentos que estou aprendendo.
 
-Código e commits em ingles, e comentários em portugues.
+## Instalação 
 
-#Estudos
+**TODO** 
+*( Essa parte em branco pra preencher explicando como é a instalação de um aplicativo Swift )*
+
+## Uso
+
+Para adicionar uma nova tarefa é necessário clicar no botão '+' que se encontra no canto superior direito.
+
+Ao pressionar o botão, o aplicativo irá direcionar para outra Page com campo de edição da tarefa e um botão para salvar a nova tarefa cadastrada.
+
+###### OBS
+
+* *Qualquer dúvida pode entrar em contato comigo pelo meu email sinta-se livre pra me mandar um oi.*
+
+----
+
+# TaskList
+
+## About
+
+This application was developed with Swift using TableView and a List of tasks in each cell. Your purpose is to practice the knowledge i'm learning on Swift
+
+## Installation 
+
+**TODO** 
+*(  This sectin is blank for you to fill it up with the explanation of how to install the application on phones as a developer )*
+
+## Usage
+
+To add a new task you need to click on the '+' button which is positioned on the top right corner of the screen.
+
+When pressed, the application will redirect to another page with an input to edit a new task and a button to save it.
+
+###### OBS
+
+*Any doubt you can contact me throw my email, fell free to send my a hello.*
+
+
